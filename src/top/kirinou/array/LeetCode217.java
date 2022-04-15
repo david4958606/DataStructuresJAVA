@@ -1,2 +1,15 @@
-package top.kirinou.array;public class LC217 {
+package top.kirinou.array;
+
+import java.util.Arrays;
+
+public class LeetCode217 {
+    public boolean containsDuplicate(int[] nums) {
+        Arrays.sort(nums);
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i] == nums[i + 1]) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
